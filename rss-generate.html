@@ -24,9 +24,6 @@
       input,select {
 
       }
-      select > option[value="1"] {
-        display: none;
-      }
     </style>
   </head>
   <body>
@@ -9496,6 +9493,8 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
         $.each( data.categories, function( key, val ) {
           $('.categories').append('<option value=' + val.id + '>' + val.name[0].value + '</option>');
         });
+      }).done(function(){
+        $('select > option[value="1"]').remove();
       });
 
       $( ".categories" )
@@ -9513,6 +9512,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
             $( ".number" ).text( $( this ).attr('value') );
           })
           .trigger( "change" );
+
 
     </script>
   </body>
