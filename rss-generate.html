@@ -9510,6 +9510,8 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
             $( ".number" ).text( $( this ).attr('value') );
           })
           .trigger( "change" );
+
+          $('body > div > select > option:nth-child(1)').remove();
     </script>
   </body>
 </html>
